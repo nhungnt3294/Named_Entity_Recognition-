@@ -7,7 +7,7 @@ config = Config()
 
 def remove_xml_tags(filename):
     '''
-    Remove xml tag in file in data folder(raw data)
+    Remove xml tag in file in dataVLSP folder(raw data)
     Args:
       filename: The name of the data file in dataVLSP folder
     Return:
@@ -24,7 +24,7 @@ def remove_xml_tags(filename):
       là	V	B-VP	O	O
       con	Nc	B-NP	O	O
 
-      saved in dataVLSP folder(processed data)
+      saved in data folder(processed data)
     '''
     f1 = open(config.rawdata_path + filename, 'r')
     f2 = open(config.data_path + filename, 'w')
@@ -42,8 +42,8 @@ def remove_xml_tags(filename):
 
 def clean_data(path):
     '''
-    Remove xml tags of all files in the VLSP folder
-    Processed data saved in dataVLSP
+    Remove xml tags of all files in the dataVLSP folder
+    Processed data saved in data
     '''
     list_files = os.listdir(path)
     for file in list_files:
